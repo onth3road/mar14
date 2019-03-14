@@ -1,0 +1,28 @@
+@import "styles";
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_button/mixins';
+
+.host {
+    display: block;
+
+    margin-top: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    @include button-dense-theme('.dense-example');
+}
+
+.title {
+    @include text-important-style;
+}
+
+.entry-button {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    color: #3e51b5;
+    font-weight: bold;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    //@include button-background-color('entry-button', #3f51b5);
+    //@include button-color('entry-button', #e8eaf6);
+}

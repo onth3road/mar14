@@ -1,0 +1,67 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_stepper/mixins';
+@import 'package:angular_components/material_yes_no_buttons/mixins';
+
+$step-width: 75vw;
+$step-height: $mat-grid * 20;
+ 
+:host {
+
+  .step-a {
+    margin-top: 3vw;
+    width: $step-width;
+  }
+
+  .step-b {
+    width: $step-width;
+  }
+
+  .step-c {
+    background-color: $mat-orange-200;
+    height: $step-height;
+    width: $step-width;
+  }
+
+  .step-d {
+    background-color: $mat-amber-200;
+    height: $step-height;
+    width: $step-width;
+  }
+
+  .custom-toggle-button {
+    background: $mat-lime-200;
+    margin-top: $mat-grid * 5;
+  }
+
+  .custom-continue-button {
+    background-color: $mat-green-500;
+    color: $mat-white;
+    font-size: $mat-grid * 2;
+    margin-top: $mat-grid * 2;
+  }
+
+  @include material-stepper-theme (
+    $selector: '.teal-themed',
+    $step-color: $mat-teal-500,
+    $button-color: $mat-white
+  );
+
+  .teal-themed {
+    @include material-yes-button-color($mat-teal-500);
+    @include material-no-button-text-color($mat-teal-500);
+  }
+
+  .input {
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 60vw;
+    padding-bottom: 0px;
+  }
+
+  .name-input {
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 30vw;
+    padding-bottom: 0px;
+  }
+}

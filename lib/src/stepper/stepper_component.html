@@ -1,0 +1,35 @@
+<section>
+  <material-stepper legalJumps="none"
+                    orientation="vertical"
+                    size="default">
+    <template step name="个人信息">
+      <div class="step-a">
+
+        
+        <material-input class="name-input"
+                        floatingLabel type="text" 
+                        label="业主姓名" requiredErrorMsg="请输入业主姓名"></material-input>
+
+        <material-input class="input" [checkValid]="checkValid"
+                  label="身份证号"
+                  floatingLabel></material-input>
+        
+      </div>
+    </template>
+
+
+    <template step name="手机验证">
+      <div class="step-b">
+        <h1>Content B</h1>
+      </div>
+    </template>
+
+
+    <template step name="人脸识别">
+      <div class="step-c">
+        <h1>Content C</h1>
+      </div>
+    </template>
+
+  </material-stepper>
+</section>
